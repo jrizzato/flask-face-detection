@@ -43,13 +43,3 @@ upload Image -> crop image -> data preprocessing -> feature extraction -> ML mod
    pip install -r requirements.txt
    ```
    El archivo `requirements.txt` se encuentran en la carpeta [deps](./deps) del proyecto.
-
----
-## 🙎‍♀️🙎‍♂️Autores
-
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
-
----
-
-> **Consejo**: Mantén el README **actualizado** conforme evoluciona el proyecto, y elimina (o añade) secciones según necesites. Esta plantilla es sólo un punto de partida general.
