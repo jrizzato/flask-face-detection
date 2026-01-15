@@ -1,4 +1,4 @@
-# 🐍Flask MAchineLearning Face recognition 
+# 🐍Flask MAchineLearning Face detection 
 
 Create a gender classification model ans integrate it to a Flask App.
 
