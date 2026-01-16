@@ -105,7 +105,7 @@ print(df1.head()) #df2 contains only the strcutrue in one column
 df1 = df['structure'].apply(pd.Series)
 print(df1.head()) # df1 now have 10,000 features (10,000 columns)
 
-df2 = pd.concat((df['gender'], df1), axis=1)
+df2 = pd.concat((df['gender'], df1), axis=1) # axis=1 means columns
 print(df2.head()) # df2 contains gender and features
 
 plt.imshow(df2.loc[0][1:].values.reshape(100,100).astype('int'), cmap='gray')
