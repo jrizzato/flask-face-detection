@@ -46,13 +46,35 @@ def pipeline_flow(img, color='rgb'):
     return img
 
 if __name__ == '__main__':
+    # for images
     import matplotlib.pyplot as plt
 
-    test_path = './data/male.jpg'
+    test_path = './data/female.png'
     # read image
     img = cv2.imread(test_path) # must be cv2 to draw the rectangle
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # convert color
 
-    img = pipeline_flow(img)
+    img = pipeline_flow(img, color='rgb')
     plt.imshow(img)
     plt.show()
+
+    # for video
+    # cap = cv2.VideoCapture('./data/video.mp4')
+    # fps = cap.get(cv2.CAP_PROP_FPS) or 25
+    # delay = int(1000/fps)
+    # color = 'bgr' # por que viene de cv2
+
+    # while True:
+    #     ret, frame = cap.read()
+
+    #     if ret == False:
+    #         break
+    
+    #     frame = pipeline_flow(frame, color)
+
+    #     cv2.imshow('Gender Detector', frame)
+    #     if cv2.waitKey(delay) == ord('s'): # press s to exit
+    #         break
+
+    # cv2.destroyAllWindows()
+    # cap.release()
