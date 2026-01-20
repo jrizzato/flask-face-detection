@@ -54,7 +54,7 @@ x_pca_50 = pca_50.fit_transform(X1)
 
 print(f'x_pca_50.shape: {x_pca_50.shape}')
 
-joblib.dump(pca_50, './data/pca_50.joblib')
+joblib.dump(pca_50, './model/pca_50.joblib')
 
 # consider the 50 component and the inverse transform
 x_pca_inv = pca_50.inverse_transform(x_pca_50)

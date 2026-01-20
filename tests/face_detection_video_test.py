@@ -3,7 +3,7 @@ import cv2
 
 cap = cv2.VideoCapture("./data/video.mp4")
 
-haar = cv2.CascadeClassifier("./data/haarcascade_frontalface_default.xml")
+haar = cv2.CascadeClassifier("./model/haarcascade_frontalface_default.xml")
 # https://github.com/opencv/opencv/tree/master/data/haarcascades
 
 def face_detect(img):

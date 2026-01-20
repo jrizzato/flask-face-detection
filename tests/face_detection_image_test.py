@@ -1,12 +1,12 @@
 import cv2
 
 # read image
-img = cv2.imread("./data/male_000281.jpg")
+img = cv2.imread("./data/male.jpg")
 # convert into gray scale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # apply haar cascade
 # https://github.com/opencv/opencv/tree/master/data/haarcascades
-haar = cv2.CascadeClassifier("./data/haarcascade_frontalface_default.xml")
+haar = cv2.CascadeClassifier("./model/haarcascade_frontalface_default.xml")
 faces = haar.detectMultiScale(gray, 1.3, 5)
 
 print(faces) # [[154  94 261 261]]
@@ -22,4 +22,4 @@ cv2.waitKey(0)
 cv2.destroyAllWindows
 
 # save
-cv2.imwrite("./data/male.png", face_crop)
+cv2.imwrite("./data/male_crop.png", face_crop)

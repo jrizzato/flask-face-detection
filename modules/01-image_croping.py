@@ -25,7 +25,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # load haar cascade classifier 
-haar = cv2.CascadeClassifier("./data/haarcascade_frontalface_default.xml")
+haar = cv2.CascadeClassifier("./model/haarcascade_frontalface_default.xml")
 faces = haar.detectMultiScale(gray, 1.5, 5)
 # print(faces) # [[ 86  86 273 273]] 
 for x,y,w,h in faces:

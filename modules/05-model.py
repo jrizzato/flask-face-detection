@@ -25,7 +25,7 @@ param_grid = {
     "kernel": ["rbf"] # radial basis function aka gaussian kernel
 }
 
-svc = SVC()
+svc = SVC(probability=True)
 
 # apply grid search cv
 # we use gridsearch with 5 CV (cross validtion)
@@ -39,6 +39,7 @@ print("grid.best_score_:", grid.best_score_)
 
 model = grid.best_estimator_
 joblib.dump(model, "./model/svc_model.joblib")
+joblib.dump(mean, './model/mean.joblib')
 
 # evaluate the model
 
