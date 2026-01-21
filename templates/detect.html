@@ -5,25 +5,22 @@ GenderVision | Detect
 {% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="position-relative text-white">
-  <!-- Imagen de fondo -->
-  <img src="./static/detect.png" style="width: 100%">
-  <!-- Capa de texto superpuesta -->
-  <div class="position-absolute end-0 ps-5" style="top: 10%;">
-    <div class="p-4" style="max-width: 500px;">
-      <h1 class="fw-bold display-5 mb-3">GenderVision</h1>
-      <p class="fs-5 mb-4">
-        Advanced Gender Detection powered by Machine Learning. 
-        Simply upload an image and our AI will process it through a complete pipeline: 
-        grayscale conversion, Haar Cascade face detection, feature extraction with PCA (Principal Component Analysis), and gender classification using Support Vector Machine (SVM).
-      </p>      
-<!-- ...existing code... -->
-      </p>      
-      <a href="{{ url_for('detect') }}" class="btn btn-outline-light btn-lg px-4 rounded-pill text-uppercase fw-semibold" style="letter-spacing: 0.05em;">
-        Try It Now
-      </a>
-    </div>
-  </div>
-</section>
+    <form action="{{ url_for('detect') }}" method="POST" enctype="multipart/form-data">
+        <label for="upload"> Upload to detect </label>
+        <input type="file" id="upload" name="image" required="true">
+        <input type="submit" value="upload & predict">
+    </form>
+
+    {% if upload %}
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img src="./static/uploads/{{ filename }}" class="rounded float-left img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./static/predict/{{ filename_gender }}" class="rounded float-left img-fluid">
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}

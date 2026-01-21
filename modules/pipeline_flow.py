@@ -9,7 +9,8 @@ pca = joblib.load('./model/pca_50.joblib')
 gender = ['Male', 'Female']
 font = cv2.FONT_HERSHEY_COMPLEX
 
-def pipeline_flow(img, color='rgb'):
+def pipeline_flow(img_path, color='rgb'):
+    img = cv2.imread(img_path)
     # convert into gray scale
     if color == 'bgr':
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -18,9 +19,7 @@ def pipeline_flow(img, color='rgb'):
 
     # crop the face (using harr cascade classifier)
     faces = haar.detectMultiScale(gray, 1.5, 3)
-    print("faces:", faces)
     for x,y,w,h in faces:
-        print("¿hay algo aca?")
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2) # drawing rectangle
         roi = gray[y:y+h, x:x+w] # actual cropping
         # normalization (0-1)
@@ -51,12 +50,12 @@ if __name__ == '__main__':
     # for images
     import matplotlib.pyplot as plt
 
-    test_path = './static/uploads/ss.jpg'
+    test_path = './data/female.png'
     # read image
     img = cv2.imread(test_path) # must be cv2 to draw the rectangle
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # convert color
 
-    img = pipeline_flow(img, color='bgr')
+    img = pipeline_flow(img, color='rgb')
     plt.imshow(img)
     plt.show()
 
