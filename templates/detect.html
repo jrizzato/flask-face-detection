@@ -6,7 +6,7 @@ GenderVision | Detect
 
 {% block content %}
     <form action="{{ url_for('detect') }}" method="POST" enctype="multipart/form-data">
-        <label for="upload"> Upload to detect </label>
+        <label for="upload" class="mt-3 mb-3 ms-3"> Upload to detect </label>
         <input type="file" id="upload" name="image" required="true">
         <input type="submit" value="upload & predict">
     </form>
