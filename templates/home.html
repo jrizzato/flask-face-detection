@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    About Us - My Website
+GenderVision | Home
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid py-0 mb-4">
-        <img src="./static/presentation.png" style="width: 100%">
+<!-- Hero Section -->
+<section class="position-relative text-white">
+  <!-- Imagen de fondo -->
+  <img src="./static/presentation.png" style="width: 100%">
+  <!-- Capa de texto superpuesta -->
+  <div class="position-absolute start-0 ps-5" style="top: 20%;">
+    <div class="p-4" style="max-width: 500px;">
+      <h1 class="fw-bold display-5 mb-3">Simple. Smart. Gender Detection.</h1>
+      <p class="fs-5 mb-4">
+        Upload an image and get instant gender identification powered by artificial intelligence.
+      </p>      
+      <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill text-uppercase fw-semibold" style="letter-spacing: 0.05em;">
+        Try It Now
+      </a>
     </div>
-
+  </div>
+</section>
 {% endblock %}
