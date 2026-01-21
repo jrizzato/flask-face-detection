@@ -8,7 +8,7 @@ GenderVision | Home
 <!-- Hero Section -->
 <section class="position-relative text-white">
   <!-- Imagen de fondo -->
-  <img src="./static/presentation.png" style="width: 100%">
+  <img src="./static/home.png" style="width: 100%">
   <!-- Capa de texto superpuesta -->
   <div class="position-absolute start-0 ps-5" style="top: 20%;">
     <div class="p-4" style="max-width: 500px;">
@@ -16,8 +16,8 @@ GenderVision | Home
       <p class="fs-5 mb-4">
         Upload an image and get instant gender identification powered by artificial intelligence.
       </p>      
-      <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill text-uppercase fw-semibold" style="letter-spacing: 0.05em;">
-        Try It Now
+      <a href="{{ url_for('detect') }}" class="btn btn-outline-light btn-lg px-4 rounded-pill text-uppercase fw-semibold" style="letter-spacing: 0.05em;">
+        Get Started
       </a>
     </div>
   </div>
