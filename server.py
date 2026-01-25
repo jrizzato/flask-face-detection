@@ -14,7 +14,7 @@ def pipeline():
 @app.route('/detect', methods=['GET', 'POST'])
 def detect():
     if request.method == 'POST':
-        f = request.files['image'] # image is value in form
+        f = request.files['image'] # image is name in form
         # print(type(f)) # <class 'werkzeug.datastructures.file_storage.FileStorage'>
         # print(f) # <FileStorage: '11.png' ('image/png')>
         filename = f.filename
