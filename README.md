@@ -1,45 +1,49 @@
-# 🐍Flask MAchineLearning Face detection 
+# Welcome to GenderVision
 
-Create a gender classification model ans integrate it to a Flask App.
+This is a demo project that shows how to create a web app using Flask and integrating a machine learning model. GenderVision takes a picture as an input and determines the gender of the person in the picture.
 
-The task is to develop a Machine Learning Model wich should automatically detect faces ans classify genders.
+***
 
-User will upload an image and the app has to detect the face and identify the gender.
+![](image.png)
 
----
-## 🏗 Arquitectura General
+![](image-1.png)
 
-### Steps:
-#### OpenCV
-* Read Image
-* Gray Scale
-* Face Detection
+![](image-2.png)
 
-#### numpy
-* index, structure and normalize
+***
 
-#### sklearn
-* Eigen Image with PCA
-* machine learning model
+## Getting Started
 
-## Machine Model Application Flow
-upload Image -> crop image -> data preprocessing -> feature extraction -> ML model -> output
+### Training Data
 
----
-## 📑Dependencias
+This project uses the **IMDB-WIKI dataset** for training. To obtain the training data:
 
-1. **Python 3.x**
-2. **matplotlib** (`pip install matplotlib`)
-3. Dependencias listadas en requierements.txt
+1. Visit: [IMDB-WIKI Dataset](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/)
+2. Download "faces only" (1GB)
+3. Place the data in the `data/` directory
 
----
-## 🚀Cómo Ejecutar el Proyecto
-1. **Clonar o descargar** el repositorio.
+**Note**: The IMDB-WIKI dataset is provided for research purposes. Please review the dataset's license and terms of use before downloading.
 
-2. **Crear y activar** un entorno virtual.
+### Setup Instructions
 
-3. **Instalar las dependencias**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   El archivo `requirements.txt` se encuentran en la carpeta [deps](./deps) del proyecto.
+```bash
+pip install -r requirements.txt
+python modules/01-image_croping.py
+python modules/02-structuring_data.py
+python modules/03-data_preprocessing.py
+python modules/04-eigen_images.py
+python modules/05-model.py
+```
+
+Then run the flask app
+```bash
+flask --app server run
+```
+
+Once que app is open, navigate to http://127.0.0.1:5000/detect, choose a picture and then click in upload & predict button
+
+## License
+
+This project is provided as-is for educational purposes.
+
+The IMDB-WIKI dataset is used under the terms specified by its creators.
