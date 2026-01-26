@@ -2,6 +2,17 @@
 
 This is a demo project that shows how to create a web app using Flask and integrating a machine learning model. GenderVision takes a picture as an input and determines the gender of the person in the picture.
 
+## ⚠️ Disclaimer
+This is a **demonstration project** for educational and portfolio purposes only. 
+It is NOT intended for production use and lacks security hardening required for real-world applications.
+
+### Known Limitations:
+- No file upload validation (accepts any file type)
+- Debug mode enabled for development
+- No authentication or user management system
+- Simplified error handling
+- Uploaded images are publicly accessible in static folders
+
 ***
 
 ![](image.png)
@@ -42,8 +53,29 @@ flask --app server run
 
 Once que app is open, navigate to http://127.0.0.1:5000/detect, choose a picture and then click in upload & predict button
 
+## 📊 Dataset
+- **Purpose:** Educational demonstration
+- **Size:** 7,000 female + 7,000 male facial images
+- **Usage:** Training and testing the gender classification model
+- **Note:** This project uses sample data for demonstration purposes only
+
+---
+
+## 🔧 Known Limitations & Production Considerations
+
+This is a demonstration project. For production use, consider:
+
+- **Security:** Implement file upload validation with `secure_filename()` and file type checking
+- **Configuration:** Disable debug mode and use environment variables for sensitive config
+- **Error Handling:** Add comprehensive try-catch blocks and user-friendly error messages
+- **Privacy:** Implement data retention policies and user consent mechanisms
+- **Performance:** Add image size limits and async processing for scalability
+- **Bias Considerations:** Gender classification models may have accuracy limitations across diverse populations
+
+---
+
 ## License
 
-This project is provided as-is for educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 The IMDB-WIKI dataset is used under the terms specified by its creators.
