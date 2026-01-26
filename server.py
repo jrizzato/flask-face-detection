@@ -32,4 +32,6 @@ def detect():
     return render_template('detect.html', upload=False)
 
 if __name__ == '__main__':
+    # NOTE: debug=True is for development only
+    # In production, use: app.run(debug=False, host='0.0.0.0')
     app.run(debug=True)

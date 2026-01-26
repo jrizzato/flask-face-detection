@@ -42,6 +42,16 @@ flask --app server run
 
 Once que app is open, navigate to http://127.0.0.1:5000/detect, choose a picture and then click in upload & predict button
 
+## Disclaimer
+This is a **demonstration project** for portfolio purposes only. 
+It is NOT intended for production use and lacks security hardening.
+
+### Known Limitations:
+- No file upload validation
+- Debug mode enabled
+- No authentication system
+- Simplified error handling
+
 ## License
 
 This project is provided as-is for educational purposes.
