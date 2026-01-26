@@ -1,0 +1,16 @@
+navbar-expand-lg controla en qué punto de breakpoint el navbar se expande o colapsa:
+
+En pantallas grandes (≥992px): El navbar muestra todos los elementos en horizontal
+En pantallas pequeñas (<992px): El navbar colapsa y muestra el botón hamburguesa (toggler)
+Los breakpoints disponibles son:
+
+navbar-expand-sm - expande en ≥576px
+navbar-expand-md - expande en ≥768px
+navbar-expand-lg - expande en ≥992px (tu caso)
+navbar-expand-xl - expande en ≥1200px
+navbar-expand-xxl - expande en ≥1400px
+navbar-expand - siempre expandido (nunca colapsa)
+Sin esta clase, el navbar estaría siempre colapsado.
+
+================================================================================================================
+

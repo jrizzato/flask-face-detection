@@ -1,8 +1,27 @@
-# virtual enviroment
-.venv
+# Datos y datasets
+data/crop/
+data/female/
+data/male/
+data/*.joblib
 
-# data
-data
-data/
+# Imágenes subidas por usuarios
+static/uploads/
+static/predict/
 
-notas.txt
+# Archivos temporales
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+
+# Variables de entorno
+.env
+.env.local
+
+# IDE
+*.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
