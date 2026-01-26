@@ -51,7 +51,7 @@ Then run the flask app
 flask --app server run
 ```
 
-Once que app is open, navigate to http://127.0.0.1:5000/detect, choose a picture and then click in upload & predict button
+Once the app is open, navigate to http://127.0.0.1:5000/detect, choose a picture and then click in upload & predict button
 
 ## 📊 Dataset
 - **Purpose:** Educational demonstration
